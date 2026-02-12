@@ -1,94 +1,114 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Adımlar Hep Sana</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 Şubat ❤️</title>
+
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:#121212;
-  color:#fff;
-  font-family:'Montserrat',sans-serif;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    background: black;
+    color: white;
+    text-align: center;
 }
-.hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:32px;
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
 }
-.cover{
-  width:320px;
-  max-width:90%;
-  border-radius:32px;
-  box-shadow:0 30px 90px rgba(0,0,0,.8);
-  margin-bottom:32px;
+
+.content {
+    margin-top: 20vh;
+    animation: fadeIn 3s ease-in-out;
 }
-.title{
-  font-size:3rem;
-  margin:0;
-  font-weight:700;
+
+h1 {
+    font-size: 3rem;
+    color: #ff4d6d;
 }
-.spotify-tag{
-  margin-top:12px;
-  color:#1DB954;
-  font-weight:600;
-  letter-spacing:1px;
+
+p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
 }
-.lyrics{
-  max-width:900px;
-  margin:0 auto;
-  padding:64px 24px;
-  font-family:'Playfair Display',serif;
-  font-size:1.2rem;
-  line-height:2.1;
-  white-space:pre-line;
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
-.footer{
-  text-align:center;
-  opacity:.6;
-  padding:32px 0 48px;
+
+button:hover {
+    background: white;
+    color: #ff4d6d;
+}
+
+.gallery {
+    margin-top: 60px;
+}
+
+.gallery img {
+    width: 250px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 </style>
 </head>
+
 <body>
 
-<section class="hero">
-  <!-- Kapak görselini HTML ile aynı klasöre koy -->
-  <img src="resimm.png" alt="Adımlar Hep Sana Kapak" class="cover" />
+<!-- Arka Plan Video -->
+<video autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+</video>
 
-  <h1 class="title">Adımlar Hep Sana</h1>
-  <div class="spotify-tag">▶ Spotify Ruhunda Şiir</div>
-</section>
+<div class="content">
+    <h1>İyi ki Varsın ❤️</h1>
+    <p>
+        Seni tanıdığım günden beri hayatımın en güzel hikayesini yazıyorum.
+        Her anım, her nefesim seninle anlamlı.
+        14 Şubat sadece bir gün değil…
+        Benim için sen demek.
+    </p>
 
-<section class="lyrics">
-Kendimle kayboldum
-Kalbimin içindeki acılara hapsoldum
+    <button onclick="document.getElementById('music').play()">Müziği Başlat 🎶</button>
 
-Acımasızdı sokaklar, adımlarımda anılar
-Kalbimin içinde sonu olmayan sancılar
+    <div class="gallery">
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+    </div>
+</div>
 
-İlk gördüğüm anda yürür oldu adımlarım hep sana
-Güzel bakışlar, kısılan gözler
-Hepsinin yeri bende
-
-Saçların dalgalanır rüzgarlı bir günde
-Ne güzel kokuyor bedenin benim tenimde
-
-Parıldayan gözlerinden bak
-Seni seven bu adama
-
-Hislerinde, sözlerinde gerçekler
-Zamanla kapılıyor
-Gülerken oluşan gamzene
-</section>
-
-<div class="footer">© 2025 · Spotify temalı şiir sayfası</div>
+<audio id="music" loop>
+    <source src="muzik.mp3" type="audio/mpeg">
+</audio>
 
 </body>
 </html>
